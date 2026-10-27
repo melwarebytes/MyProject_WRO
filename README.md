@@ -19,6 +19,7 @@ A city sanitation management portal that ingests ultrasonic fill-level data from
 | [4_SRS_and_WBS](4_SRS_and_WBS/) | SRS and Work Breakdown Structure (placeholder) | [README.md](4_SRS_and_WBS/README.md) |
 | [5_Copilot_Generated_Code](5_Copilot_Generated_Code/) | Copilot generated code (placeholder) | [README.md](5_Copilot_Generated_Code/README.md) |
 | [6_Software_Testing](6_Software_Testing/) | Testing practice (placeholder) | [README.md](6_Software_Testing/README.md) |
+| [tower_maintenance](tower_maintenance/) | Lab 5: Static code analysis (Pylint, Flake8, Bandit) on the assigned tower maintenance script | [tower_maintenance.py](tower_maintenance/tower_maintenance.py)<br>[issues.md](tower_maintenance/issues.md)<br>[reflection.md](tower_maintenance/reflection.md)<br>[reports/before](tower_maintenance/reports/before/), [reports/after](tower_maintenance/reports/after/) |
 | [_unsorted](_unsorted/) | Instructor handouts, not deliverables | [Lab1_RE_Student_Handout.pdf](_unsorted/Lab1_RE_Student_Handout.pdf)<br>[Lab2_Jira_Student_Handout.pdf](_unsorted/Lab2_Jira_Student_Handout.pdf) |
 
 ## Links
