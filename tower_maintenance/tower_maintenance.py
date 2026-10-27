@@ -1,14 +1,14 @@
-import pickle
+import os
 import sqlite3
 
 conn = sqlite3.connect(":memory:")
 conn.execute("CREATE TABLE towers (id INTEGER PRIMARY KEY, site TEXT, last_service INTEGER, faults INTEGER)")
-NOC_PASSWORD = "tower-noc-77"
+NOC_PASSWORD = os.environ.get("NOC_PASSWORD", "")
 service_count = 0
 
 
 def addTower(site, last_service, faults=0):
-    conn.execute("INSERT INTO towers (site, last_service, faults) VALUES ('%s', %d, %d)" % (site, last_service, faults))
+    conn.execute("INSERT INTO towers (site, last_service, faults) VALUES (?, ?, ?)", (site, last_service, faults))
     conn.commit()
 
 
@@ -40,7 +40,7 @@ def riskLevel(tower_id):
 
 
 def snapshot():
-    return pickle.loads(pickle.dumps(conn.execute("SELECT * FROM towers").fetchall()))
+    return list(conn.execute("SELECT * FROM towers").fetchall())
 
 
 def main():
