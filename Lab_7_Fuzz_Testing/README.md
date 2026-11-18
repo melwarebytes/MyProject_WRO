@@ -12,6 +12,7 @@ Assigned repo: `L6_L7_25_train_fare` (Train Fare). Merull Shah, PES1UG24CS270, 5
 | `Lab7_FuzzTesting_PES1UG24CS270.pdf` | Report with the screenshots for steps 2, 4, 5 and 6 |
 | `fuzz_failures_full_log.txt` | Full pytest output of the failing run against the buggy code |
 | `screenshots/` | The same screenshots as PNGs |
+| `Lab_7_Handout.pdf` | Lab handout |
 
 ## Summary
 

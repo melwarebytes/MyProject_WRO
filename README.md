@@ -1,30 +1,18 @@
-# MyProject_WRO: Municipal Solid Waste Route Optimizer
+# Software Engineering Lab Submissions
 
 - **Name:** Merull Shah
 - **SRN:** PES1UG24CS270
 - **Section:** E
-- **Course:** Software Engineering, PES University (Individual Project, Problem Statement #25)
+- **Course:** Software Engineering, PES University
 
-## Project description
+Labs 1 and 2 use Problem Statement #25, the Municipal Solid Waste Route Optimizer: a city sanitation portal that reads fill levels from smart bins, plans garbage-truck routes and tracks missed-pickup complaints. Each folder has its own README and the lab handout.
 
-A city sanitation management portal that ingests ultrasonic fill-level data from smart trash bins, plans optimized collection routes for garbage trucks, and tracks missed-pickup citizen complaints. Actors are the Sanitation Supervisor, Truck Driver, Citizen and the Fleet Telematics/GPS System.
-
-## Contents
-
-| Folder | Contains | Files |
+| Lab | Topic | Main files |
 |---|---|---|
-| [1_Requirements_Engineering](1_Requirements_Engineering/) | FR/NFR requirements, problem statement, use-case flow (RTM not yet added) | [Requirements_Table_FR_NFR.docx](1_Requirements_Engineering/Requirements_Table_FR_NFR.docx)<br>[Problem_Statement_25.pdf](1_Requirements_Engineering/Problem_Statement_25.pdf)<br>[UseCase_Flow_GenerateRoute.docx](1_Requirements_Engineering/UseCase_Flow_GenerateRoute.docx) |
-| [2_Architectural_Diagram](2_Architectural_Diagram/) | Architecture / system diagrams | [UseCase_Diagram.pdf](2_Architectural_Diagram/UseCase_Diagram.pdf) |
-| [3_Project_Creation_Screenshots](3_Project_Creation_Screenshots/) | Jira project creation reports with screenshots | [Jira_Kanban_Project_Creation.docx](3_Project_Creation_Screenshots/Jira_Kanban_Project_Creation.docx), [.pdf](3_Project_Creation_Screenshots/Jira_Kanban_Project_Creation.pdf)<br>[Jira_Scrum_Project_Creation.docx](3_Project_Creation_Screenshots/Jira_Scrum_Project_Creation.docx), [.pdf](3_Project_Creation_Screenshots/Jira_Scrum_Project_Creation.pdf)<br>[Jira_Bug_Tracker_Project_Creation.docx](3_Project_Creation_Screenshots/Jira_Bug_Tracker_Project_Creation.docx), [.pdf](3_Project_Creation_Screenshots/Jira_Bug_Tracker_Project_Creation.pdf)<br>[Jira_Reports_PES1UG24CS270.zip](3_Project_Creation_Screenshots/Jira_Reports_PES1UG24CS270.zip) |
-| [4_SRS_and_WBS](4_SRS_and_WBS/) | SRS and Work Breakdown Structure (placeholder) | [README.md](4_SRS_and_WBS/README.md) |
-| [5_Copilot_Generated_Code](5_Copilot_Generated_Code/) | Copilot generated code (placeholder) | [README.md](5_Copilot_Generated_Code/README.md) |
-| [6_Software_Testing](6_Software_Testing/) | Testing practice (placeholder) | [README.md](6_Software_Testing/README.md) |
-| [tower_maintenance](tower_maintenance/) | Lab 5: Static code analysis (Pylint, Flake8, Bandit) on the assigned tower maintenance script | [tower_maintenance.py](tower_maintenance/tower_maintenance.py)<br>[issues.md](tower_maintenance/issues.md)<br>[reflection.md](tower_maintenance/reflection.md)<br>[reports/before](tower_maintenance/reports/before/), [reports/after](tower_maintenance/reports/after/) |
-| [Lab_6_Code_Branch_Coverage](Lab_6_Code_Branch_Coverage/) | Lab 6: line and branch coverage on the assigned train fare module (100% / 100%) | [CodeCoverageTest_train_fare.py](Lab_6_Code_Branch_Coverage/CodeCoverageTest_train_fare.py)<br>[BranchCoverageTest_train_fare.py](Lab_6_Code_Branch_Coverage/BranchCoverageTest_train_fare.py)<br>[screenshots](Lab_6_Code_Branch_Coverage/screenshots/) |
-| [Lab_7_Fuzz_Testing](Lab_7_Fuzz_Testing/) | Lab 7: Hypothesis fuzz testing and input validation fixes for the train fare script | [train_fare.py](Lab_7_Fuzz_Testing/train_fare.py) (fixed)<br>[test_train_fare.py](Lab_7_Fuzz_Testing/test_train_fare.py)<br>[Lab7_FuzzTesting_PES1UG24CS270.pdf](Lab_7_Fuzz_Testing/Lab7_FuzzTesting_PES1UG24CS270.pdf) |
-| [_unsorted](_unsorted/) | Instructor handouts, not deliverables | [Lab1_RE_Student_Handout.pdf](_unsorted/Lab1_RE_Student_Handout.pdf)<br>[Lab2_Jira_Student_Handout.pdf](_unsorted/Lab2_Jira_Student_Handout.pdf) |
-
-## Links
-
-- Copilot generated code repo (folder 5): _TODO: add link_
-- Fixed testing repo (folder 6): _TODO: add link_
+| [Lab 1](Lab_1_Requirements_Engineering/) | Requirements engineering and UML use-case modelling | [Requirements table](Lab_1_Requirements_Engineering/Requirements_Table_FR_NFR.docx), [use-case diagram](Lab_1_Requirements_Engineering/UseCase_Diagram.pdf), [use-case flow](Lab_1_Requirements_Engineering/UseCase_Flow_GenerateRoute.docx) |
+| [Lab 2](Lab_2_Jira/) | Agile project management with Jira | [Scrum](Lab_2_Jira/Jira_Scrum_Project_Creation.pdf), [Kanban](Lab_2_Jira/Jira_Kanban_Project_Creation.pdf), [Bug tracker](Lab_2_Jira/Jira_Bug_Tracker_Project_Creation.pdf) reports |
+| [Lab 3](Lab_3_Architecture/) | Component modelling and architecture selection (Coffee Kiosk) | [Component diagram](Lab_3_Architecture/Component_Diagram_Coffee_Kiosk.pdf), [justification](Lab_3_Architecture/Lab3_Architecture_Justification.pdf) |
+| [Lab 4](Lab_4_Vibe_Coding/) | Vibe coding: fixing and extending a game | [game.py](Lab_4_Vibe_Coding/game.py), before/after videos, [chat history](Lab_4_Vibe_Coding/chat_history.pdf) |
+| [Lab 5](Lab_5_Static_Code_Analysis/) | Static code analysis with Pylint, Flake8 and Bandit | [tower_maintenance.py](Lab_5_Static_Code_Analysis/tower_maintenance.py), [issues](Lab_5_Static_Code_Analysis/issues.md), [reflection](Lab_5_Static_Code_Analysis/reflection.md), before/after reports |
+| [Lab 6](Lab_6_Code_Branch_Coverage/) | Code and branch coverage (train fare module) | [CodeCoverageTest](Lab_6_Code_Branch_Coverage/CodeCoverageTest_train_fare.py), [BranchCoverageTest](Lab_6_Code_Branch_Coverage/BranchCoverageTest_train_fare.py), screenshots |
+| [Lab 7](Lab_7_Fuzz_Testing/) | Fuzz testing with Hypothesis (train fare script) | [train_fare.py](Lab_7_Fuzz_Testing/train_fare.py), [fuzz tests](Lab_7_Fuzz_Testing/test_train_fare.py), [report PDF](Lab_7_Fuzz_Testing/Lab7_FuzzTesting_PES1UG24CS270.pdf) |

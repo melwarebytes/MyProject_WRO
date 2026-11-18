@@ -13,6 +13,7 @@ Assigned repo: `L6_L7_25_train_fare` (Train Fare). Merull Shah, PES1UG24CS270, 5
 | `CodeCoverageTest_train_fare.py` | Tests written for line coverage |
 | `BranchCoverageTest_train_fare.py` | Tests written for branch coverage, including boundary values |
 | `screenshots/` | Terminal output of the coverage runs |
+| `Lab_6_Handout.pdf` | Lab handout |
 
 ## Results (coverage on `train_fare.py`)
 
