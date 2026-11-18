@@ -1,0 +1,287 @@
+$ python -m pytest test_train_fare.py --tb=short
+======================================= test session starts ========================================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/claude/cap/l7b
+plugins: platformdirs-4.13.5, anyio-4.15.1, hypothesis-6.170.15
+collecting ... collected 9 items                                                                                  
+
+test_train_fare.py F.FF.FF.F                                                                 [100%]
+
+============================================= FAILURES =============================================
+_____________________________________ test_parse_pnr_no_crash ______________________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/claude/cap/l7b/test_train_fare.py", line 13, in test_parse_pnr_no_crash
+  |     def test_parse_pnr_no_crash(s):
+  |                    ^^^
+  |   File "/usr/local/lib/python3.13/site-packages/hypothesis/core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 15, in test_parse_pnr_no_crash
+    |     parse_pnr(s)
+    |     ~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 4, in parse_pnr
+    |     return int(pnr[0]), int(pnr[1:])
+    |                         ~~~^^^^^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 17, in test_parse_pnr_no_crash
+    |     assert False, f"parse_pnr crashed with: {e!r}"
+    | AssertionError: parse_pnr crashed with: ValueError("invalid literal for int() with base 10: ''")
+    | assert False
+    | Failing test case: test_parse_pnr_no_crash(
+    |     s='0',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 15, in test_parse_pnr_no_crash
+    |     parse_pnr(s)
+    |     ~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 4, in parse_pnr
+    |     return int(pnr[0]), int(pnr[1:])
+    |                ~~~^^^
+    | IndexError: string index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 17, in test_parse_pnr_no_crash
+    |     assert False, f"parse_pnr crashed with: {e!r}"
+    | AssertionError: parse_pnr crashed with: IndexError('string index out of range')
+    | assert False
+    | Failing test case: test_parse_pnr_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 15, in test_parse_pnr_no_crash
+    |     parse_pnr(s)
+    |     ~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 4, in parse_pnr
+    |     return int(pnr[0]), int(pnr[1:])
+    |                ~~~^^^
+    | TypeError: 'NoneType' object is not subscriptable
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 17, in test_parse_pnr_no_crash
+    |     assert False, f"parse_pnr crashed with: {e!r}"
+    | AssertionError: parse_pnr crashed with: TypeError("'NoneType' object is not subscriptable")
+    | assert False
+    | Failing test case: test_parse_pnr_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+_______________________________ test_parse_pnr_rejects_wrong_length ________________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/claude/cap/l7b/test_train_fare.py", line 28, in test_parse_pnr_rejects_wrong_length
+  |     def test_parse_pnr_rejects_wrong_length(pnr):
+  |                    ^^^
+  |   File "/usr/local/lib/python3.13/site-packages/hypothesis/core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 29, in test_parse_pnr_rejects_wrong_length
+    |     assert parse_pnr(pnr) is None
+    | AssertionError: assert (0, 0) is None
+    |  +  where (0, 0) = parse_pnr('00')
+    | Failing test case: test_parse_pnr_rejects_wrong_length(
+    |     pnr='00',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 29, in test_parse_pnr_rejects_wrong_length
+    |     assert parse_pnr(pnr) is None
+    |            ~~~~~~~~~^^^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 4, in parse_pnr
+    |     return int(pnr[0]), int(pnr[1:])
+    |                         ~~~^^^^^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | Failing test case: test_parse_pnr_rejects_wrong_length(
+    |     pnr='0',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 29, in test_parse_pnr_rejects_wrong_length
+    |     assert parse_pnr(pnr) is None
+    |            ~~~~~~~~~^^^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 4, in parse_pnr
+    |     return int(pnr[0]), int(pnr[1:])
+    |                ~~~^^^
+    | IndexError: string index out of range
+    | Failing test case: test_parse_pnr_rejects_wrong_length(
+    |     pnr='',
+    | )
+    +------------------------------------
+__________________________________ test_journey_distance_no_crash __________________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/claude/cap/l7b/test_train_fare.py", line 34, in test_journey_distance_no_crash
+  |     def test_journey_distance_no_crash(s):
+  |                    ^^^
+  |   File "/usr/local/lib/python3.13/site-packages/hypothesis/core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 36, in test_journey_distance_no_crash
+    |     journey_distance(s)
+    |     ~~~~~~~~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 7, in journey_distance
+    |     distances = [int(d) for d in distances_csv.split(',')]
+    |                  ~~~^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 38, in test_journey_distance_no_crash
+    |     assert False, f"journey_distance crashed with: {e!r}"
+    | AssertionError: journey_distance crashed with: ValueError("invalid literal for int() with base 10: ''")
+    | assert False
+    | Failing test case: test_journey_distance_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 36, in test_journey_distance_no_crash
+    |     journey_distance(s)
+    |     ~~~~~~~~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 7, in journey_distance
+    |     distances = [int(d) for d in distances_csv.split(',')]
+    |                                  ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 38, in test_journey_distance_no_crash
+    |     assert False, f"journey_distance crashed with: {e!r}"
+    | AssertionError: journey_distance crashed with: AttributeError("'NoneType' object has no attribute 'split'")
+    | assert False
+    | Failing test case: test_journey_distance_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+_______________________________ test_journey_distance_never_negative _______________________________
+test_train_fare.py:49: in test_journey_distance_never_negative
+    def test_journey_distance_never_negative(stops):
+                   ^^^
+test_train_fare.py:51: in test_journey_distance_never_negative
+    assert result is None or result >= 0
+E   assert (-1 is None or -1 >= 0)
+E   Failing test case: test_journey_distance_never_negative(
+E       stops=[1, 0],
+E   )
+_____________________________________ test_berth_type_no_crash _____________________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/claude/cap/l7b/test_train_fare.py", line 56, in test_berth_type_no_crash
+  |     def test_berth_type_no_crash(s):
+  |                    ^^^
+  |   File "/usr/local/lib/python3.13/site-packages/hypothesis/core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 58, in test_berth_type_no_crash
+    |     berth_type(s)
+    |     ~~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 12, in berth_type
+    |     return coach.upper(), BERTHS[int(number) % 8]
+    |                                  ~~~^^^^^^^^
+    | ValueError: invalid literal for int() with base 10: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 60, in test_berth_type_no_crash
+    |     assert False, f"berth_type crashed with: {e!r}"
+    | AssertionError: berth_type crashed with: ValueError("invalid literal for int() with base 10: ''")
+    | assert False
+    | Failing test case: test_berth_type_no_crash(
+    |     s='-',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 58, in test_berth_type_no_crash
+    |     berth_type(s)
+    |     ~~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 11, in berth_type
+    |     coach, number = seat.split('-')
+    |     ^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 60, in test_berth_type_no_crash
+    |     assert False, f"berth_type crashed with: {e!r}"
+    | AssertionError: berth_type crashed with: ValueError('not enough values to unpack (expected 2, got 1)')
+    | assert False
+    | Failing test case: test_berth_type_no_crash(
+    |     s='',
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 58, in test_berth_type_no_crash
+    |     berth_type(s)
+    |     ~~~~~~~~~~^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 11, in berth_type
+    |     coach, number = seat.split('-')
+    |                     ^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 60, in test_berth_type_no_crash
+    |     assert False, f"berth_type crashed with: {e!r}"
+    | AssertionError: berth_type crashed with: AttributeError("'NoneType' object has no attribute 'split'")
+    | assert False
+    | Failing test case: test_berth_type_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+____________________________ test_berth_type_rejects_out_of_range_seat _____________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/claude/cap/l7b/test_train_fare.py", line 75, in test_berth_type_rejects_out_of_range_seat
+  |     def test_berth_type_rejects_out_of_range_seat(seat_no):
+  |                    ^^^
+  |   File "/usr/local/lib/python3.13/site-packages/hypothesis/core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 76, in test_berth_type_rejects_out_of_range_seat
+    |     assert berth_type(f"S3-{seat_no}") is None
+    |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+    |   File "/home/claude/cap/l7b/train_fare.py", line 11, in berth_type
+    |     coach, number = seat.split('-')
+    |     ^^^^^^^^^^^^^
+    | ValueError: too many values to unpack (expected 2)
+    | Failing test case: test_berth_type_rejects_out_of_range_seat(
+    |     seat_no=-1,
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/claude/cap/l7b/test_train_fare.py", line 76, in test_berth_type_rejects_out_of_range_seat
+    |     assert berth_type(f"S3-{seat_no}") is None
+    | AssertionError: assert ('S3', 'SU') is None
+    |  +  where ('S3', 'SU') = berth_type('S3-0')
+    | Failing test case: test_berth_type_rejects_out_of_range_seat(
+    |     seat_no=0,
+    | )
+    +------------------------------------
+===================================== short test summary info ======================================
+FAILED test_train_fare.py::test_parse_pnr_no_crash - ExceptionGroup: Hypothesis found 3 distinct ...
+FAILED test_train_fare.py::test_parse_pnr_rejects_wrong_length - ExceptionGroup: Hypothesis found...
+FAILED test_train_fare.py::test_journey_distance_no_crash - ExceptionGroup: Hypothesis found 2 di...
+FAILED test_train_fare.py::test_journey_distance_never_negative - assert (-1 is None or -1 >= 0)
+FAILED test_train_fare.py::test_berth_type_no_crash - ExceptionGroup: Hypothesis found 3 distinct...
+FAILED test_train_fare.py::test_berth_type_rejects_out_of_range_seat - ExceptionGroup: Hypothesis...
+=================================== 6 failed, 3 passed in 0.42s ====================================
