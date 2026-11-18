@@ -20,6 +20,8 @@ A city sanitation management portal that ingests ultrasonic fill-level data from
 | [5_Copilot_Generated_Code](5_Copilot_Generated_Code/) | Copilot generated code (placeholder) | [README.md](5_Copilot_Generated_Code/README.md) |
 | [6_Software_Testing](6_Software_Testing/) | Testing practice (placeholder) | [README.md](6_Software_Testing/README.md) |
 | [tower_maintenance](tower_maintenance/) | Lab 5: Static code analysis (Pylint, Flake8, Bandit) on the assigned tower maintenance script | [tower_maintenance.py](tower_maintenance/tower_maintenance.py)<br>[issues.md](tower_maintenance/issues.md)<br>[reflection.md](tower_maintenance/reflection.md)<br>[reports/before](tower_maintenance/reports/before/), [reports/after](tower_maintenance/reports/after/) |
+| [Lab_6_Code_Branch_Coverage](Lab_6_Code_Branch_Coverage/) | Lab 6: line and branch coverage on the assigned train fare module (100% / 100%) | [CodeCoverageTest_train_fare.py](Lab_6_Code_Branch_Coverage/CodeCoverageTest_train_fare.py)<br>[BranchCoverageTest_train_fare.py](Lab_6_Code_Branch_Coverage/BranchCoverageTest_train_fare.py)<br>[screenshots](Lab_6_Code_Branch_Coverage/screenshots/) |
+| [Lab_7_Fuzz_Testing](Lab_7_Fuzz_Testing/) | Lab 7: Hypothesis fuzz testing and input validation fixes for the train fare script | [train_fare.py](Lab_7_Fuzz_Testing/train_fare.py) (fixed)<br>[test_train_fare.py](Lab_7_Fuzz_Testing/test_train_fare.py)<br>[Lab7_FuzzTesting_PES1UG24CS270.pdf](Lab_7_Fuzz_Testing/Lab7_FuzzTesting_PES1UG24CS270.pdf) |
 | [_unsorted](_unsorted/) | Instructor handouts, not deliverables | [Lab1_RE_Student_Handout.pdf](_unsorted/Lab1_RE_Student_Handout.pdf)<br>[Lab2_Jira_Student_Handout.pdf](_unsorted/Lab2_Jira_Student_Handout.pdf) |
 
 ## Links
